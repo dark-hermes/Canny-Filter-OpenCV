@@ -17,7 +17,11 @@ def canny_filter(image):
 # get video capture from webcam
 capture = cv2.VideoCapture(0)
 
-
+"""
+read the capture in the loop,
+show the frame that has filtered by canny_filter() function,
+if user hit enter the program will stopped
+"""
 while True:
     ratio, frame = capture.read()
     cv2.imshow('Canny Filter', canny_filter(frame))
